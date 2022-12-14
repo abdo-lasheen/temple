@@ -447,7 +447,7 @@ header nav .form i {
 .design {
     padding-top: var(--padding);
     padding-bottom: var(--padding);
-    height: 60vh;
+    height: 70vh;
     background-color: #1f2021;
 
     position: relative;
@@ -495,7 +495,7 @@ header nav .form i {
     top: 50%;
     right: 0;
     width: 50%;
-    transform: translateY(-45%);
+    transform: translateY(-60%);
     padding: 50px;
     color: white;
     background-color: var(--trancolor);
