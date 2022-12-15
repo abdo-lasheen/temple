@@ -133,7 +133,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    min-height: 97Px;
+    min-height: 90Px;
 }
 
 header .container::after {
@@ -141,8 +141,8 @@ header .container::after {
     position: absolute;
     height: 1px;
     bottom: 0;
-    left: 15px;
-    width: calc(100% - 30px);
+    left: 1vw;
+    width: calc(100% - 2vw);
     background-color: #a2a2a2;
 }
 
@@ -226,7 +226,7 @@ header nav ul li a {
     text-decoration: none;
     font-size: 14px;
     transition: 0.3;
-    padding: 40px 10px;
+    padding: 40px 1vw;
     position: relative;
     z-index: 3;
 
@@ -516,7 +516,7 @@ header nav .form i {
 
     .design .text {
         width: 100%;
-        transform: translateY(-45%);
+        transform: translateY(-35%);
 
     }
 
@@ -539,3 +539,193 @@ header nav .form i {
 }
 
 /* End Design */
+
+/* Start Portfolio */
+.portfolio {
+    padding-top: var(--padding);
+    padding-bottom: calc(var(--padding) - 0px);
+}
+
+@media (max-width:768px) {
+    .portfolio {
+
+        padding-bottom: calc(var(--padding) - 30px);
+    }
+}
+
+.portfolio .shuffle {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .shuffle li {
+    padding: 10px;
+}
+
+.portfolio .shuffle li.active {
+
+    background-color: var(--maincolor);
+    color: white;
+}
+
+.portfolio .shuffle li:hover {
+    background-color: var(--maincolor);
+    color: white;
+
+}
+
+.portfolio .imgs-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.portfolio .imgs-container .box {
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width:768px) {
+
+    .portfolio .imgs-container .box {
+        flex-basis: 50%;
+    }
+
+}
+
+@media (min-width:1199px) {
+
+    .portfolio .imgs-container .box {
+        flex-basis: 25%;
+    }
+
+}
+
+.portfolio .imgs-container .box img {
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+
+.portfolio .imgs-container .box .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    bottom: -100%;
+    transition: 0.4s;
+    text-transform: capitalize;
+}
+
+.portfolio .imgs-container .box .caption h4 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.portfolio .imgs-container .box .caption p {
+    color: var(--maincolor);
+}
+
+.portfolio .imgs-container .box:hover .caption {
+    bottom: 0;
+}
+
+.portfolio .imgs-container .box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio .more {
+    background-color: var(--maincolor);
+    color: white;
+    padding: 15px 20px;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+
+}
+
+.portfolio .more:hover {
+    box-shadow: 0px 0px 2px 3px #e4f1f5;
+}
+
+/* End Portfolio */
+
+
+/* Start Video */
+.video {
+
+    position: relative;
+
+}
+
+.video img {
+    width: 100%;
+    background-size: cover;
+}
+
+.video::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+}
+
+.video .text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    transform: translateY(-50%);
+    background-color: var(--trancolor);
+    color: white;
+}
+
+
+
+.video .text h2 {
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.video .text p {
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.video .text button {
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: #0f170b;
+    border: none;
+}
+
+@media (max-width:768px) {
+    .video .text {
+        padding: 15px;
+    }
+
+    .video .text h2 {
+        margin: 0 0 20px;
+    }
+
+    .video .text p {
+        margin-bottom: 20px;
+    }
+
+    .video .text button {
+
+        padding: 10px 10px;
+    }
+}
+
+/* End Video */
